@@ -8,8 +8,46 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="upload-wrapper">
+          <img src="icon/upload-icon.svg" alt="" />
+          <p class="upload-text">Faylni yuklang</p>
+        </div>
+        <div class="content">
+          <div class="sizes">
+            <div class="column width">
+              <label for="image-width">Eni</label>
+              <input id="image-width" type="number" name="image-width" />
+            </div>
+            <div class="column height">
+              <label for="image-height">Bo'yi</label>
+              <input id="image-height" type="number" name="image-height" />
+            </div>
+          </div>
+          <div class="checkboxes">
+            <div class="column ratio">
+              <input id="image-ratio" type="checkbox" name="image-ratio" />
+              <label for="image-ratio">Qulf nisbati</label>
+            </div>
+            <div class="column size">
+              <input id="image-size" type="checkbox" name="image-size" />
+              <label for="image-size">Hajmni kamaytirish</label>
+            </div>
+          </div>
+          <button class="download-button" type="button">
+            Rasmni yuklab olish
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
