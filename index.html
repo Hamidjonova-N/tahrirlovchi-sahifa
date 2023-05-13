@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
+    <title>Rasm tahrirlovchi sahifa</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -18,28 +18,29 @@
     <div class="container">
       <div class="wrapper">
         <div class="upload-wrapper">
-          <img src="icon/upload-icon.svg" alt="" />
-          <p class="upload-text">Faylni yuklang</p>
+          <input type="file" accept="image/*" hidden>
+          <img class="upload-img" src="icon/upload-icon.svg" alt="" />
+          <p class="upload-text">Rasmni yuklang</p>
         </div>
         <div class="content">
           <div class="sizes">
             <div class="column width">
-              <label for="image-width">Eni</label>
-              <input id="image-width" type="number" name="image-width" />
+              <label for="width-input">Rasm kengligi</label>
+              <input id="width-input" type="number" name="width-input" />
             </div>
             <div class="column height">
-              <label for="image-height">Bo'yi</label>
-              <input id="image-height" type="number" name="image-height" />
+              <label for="height-input">Rasm balandligi</label>
+              <input id="height-input" type="number" name="height-input" />
             </div>
           </div>
           <div class="checkboxes">
             <div class="column ratio">
-              <input id="image-ratio" type="checkbox" name="image-ratio" />
-              <label for="image-ratio">Qulf nisbati</label>
+              <input id="ratio-input" type="checkbox" name="ratio-input" checked />
+              <label for="ratio-input">Nisbatni saqlash</label>
             </div>
             <div class="column size">
-              <input id="image-size" type="checkbox" name="image-size" />
-              <label for="image-size">Hajmni kamaytirish</label>
+              <input id="size-input" type="checkbox" name="size-input" />
+              <label for="size-input">Hajmni kamaytirish</label>
             </div>
           </div>
           <button class="download-button" type="button">
