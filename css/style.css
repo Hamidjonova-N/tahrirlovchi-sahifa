@@ -1,7 +1,7 @@
 /* CUSTOM PROPERTY */
 
 :root {
-  --accent-color: #927dfc;
+  --accent-color: #92d2f8;
   --background-color: #ffffff;
   --text-color: #000000;
 }
@@ -79,7 +79,7 @@ img {
 /* ACTIVE CLASS */
 
 .active {
-  height: 520px;
+  height: 530px;
 }
 
 .active .upload-wrapper {
@@ -172,4 +172,16 @@ img {
   cursor: pointer;
   padding: 15px;
   margin: 30px 0 10px;
+}
+
+/* REFRESH BUTTON */
+
+#refresh-button {
+  font-size: 12px;
+  text-decoration: underline;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  margin: 5px 135px;
+  cursor: pointer;
 }

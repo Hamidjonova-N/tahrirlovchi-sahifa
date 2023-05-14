@@ -9,6 +9,7 @@ let heightInput = document.querySelector("#height-input");
 let ratioInput = document.querySelector("#ratio-input");
 let sizeInput = document.querySelector("#size-input");
 let downloadButton = document.querySelector(".download-button");
+let refreshButton = document.querySelector("#refresh-button");
 let ogImageRatio;
 
 let loadFile = (e) => {
@@ -70,4 +71,8 @@ fileInput.addEventListener("change", loadFile);
 // uploadWrapper "click" bo'lganda fileInput ham "click" bo'lishi funksiyasi
 uploadWrapper.addEventListener("click", () => {
   fileInput.click();
+});
+
+refreshButton.addEventListener("click", () => {
+  location.reload();
 });
