@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Hamidjonova Nigoraxon" />
     <title>Rasm tahrirlovchi sahifa</title>
-    <!-- Stylesheets -->
-    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
@@ -19,7 +18,7 @@
     <link rel="icon" href="icon/letter-t.svg" type="image/svg" sizes="16x16" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="padding-bottom: 20px">
       <div class="wrapper">
         <div class="upload-wrapper">
           <input type="file" accept="image/*" hidden />
@@ -52,10 +51,23 @@
               <label for="size-input">Hajmni kamaytirish</label>
             </div>
           </div>
+          <div class="sizes-info">
+            <p class="original-size"></p>
+            <p class="resized-size"></p>
+          </div>
           <button class="download-button" type="button">
             Rasmni yuklab olish
           </button>
-          <a id="refresh-button">Sahifani yangilash</a>
+          <a
+            id="refresh-button"
+            style="
+              margin-top: 20px;
+              background-color: white;
+              padding: 2px;
+              border-radius: 5px;
+            "
+            >Sahifani yangilash</a
+          >
         </div>
       </div>
     </div>

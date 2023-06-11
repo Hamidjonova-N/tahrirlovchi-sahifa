@@ -79,7 +79,7 @@ img {
 /* ACTIVE CLASS */
 
 .active {
-  height: 530px;
+  height: 585px;
 }
 
 .active .upload-wrapper {
@@ -158,6 +158,19 @@ img {
   align-items: center;
 }
 
+/* SIZES-INFO */
+
+.sizes-info {
+  margin: 20px 0;
+}
+
+.original-size,
+.resized-size {
+  margin: 5px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
 /* DOWNLOAD-BUTTON */
 
 .download-button {
@@ -171,7 +184,7 @@ img {
   outline: none;
   cursor: pointer;
   padding: 15px;
-  margin: 30px 0 10px;
+  margin: 5px 0 0;
 }
 
 /* REFRESH BUTTON */
@@ -182,6 +195,6 @@ img {
   display: inline-block;
   background-color: transparent;
   border: none;
-  margin: 5px 135px;
+  margin: 0 135px;
   cursor: pointer;
 }

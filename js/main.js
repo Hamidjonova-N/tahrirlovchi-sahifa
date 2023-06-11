@@ -11,6 +11,8 @@ let sizeInput = document.querySelector("#size-input");
 let downloadButton = document.querySelector(".download-button");
 let refreshButton = document.querySelector("#refresh-button");
 let ogImageRatio;
+let originalSizeText = document.querySelector(".original-size");
+let resizedSizeText = document.querySelector(".resized-size");
 
 let loadFile = (e) => {
   // Foydalanuvchi tanlagan birinchi faylni olish
@@ -27,6 +29,7 @@ let loadFile = (e) => {
     heightInput.value = previewImg.naturalHeight;
     ogImageRatio = previewImg.naturalWidth / previewImg.naturalHeight;
     document.querySelector(".wrapper").classList.add("active");
+    updateOriginalSize(file.size);
   });
 };
 
@@ -46,7 +49,18 @@ heightInput.addEventListener("keyup", () => {
   widthInput.value = Math.floor(width);
 });
 
-let resizeAndDownload = () => {
+let updateOriginalSize = (size) => {
+  let fileSize = (size / 1024).toFixed(2); // KB ga o'tkazish va 2 belgacha decimal belgilash
+  let compressSize = fileSize / 2;
+  originalSizeText.textContent = `Hajmi: ${fileSize}KB | Qisqartirilgan tahminiy hajmi: ${compressSize}KB`;
+};
+
+let updateResizedSize = (size) => {
+  let fileSize = (size / 1024).toFixed(2); // KB ga o'tkazish va 2 belgacha decimal belgilash
+  resizedSizeText.textContent = `Rasmning qisqartirilgan hajmi: ${fileSize} KB`;
+};
+
+let resizeAndDownload = async () => {
   let canvas = document.createElement("canvas");
   let a = document.createElement("a");
   let ctx = canvas.getContext("2d");
@@ -64,6 +78,12 @@ let resizeAndDownload = () => {
   a.download = new Date().getTime();
   // Faylni yuklab olish uchun <a> elementini bosish
   a.click();
+
+  // Rasm hajmini yangilash
+  let resizedFileSize = await fetch(a.href)
+    .then((res) => res.blob())
+    .then((blob) => blob.size);
+  updateResizedSize(resizedFileSize);
 };
 
 downloadButton.addEventListener("click", resizeAndDownload);
